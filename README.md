@@ -5,7 +5,9 @@
 
 CAN Bus Monitor is an application designed for monitoring, analyzing, and sending CAN (Controller Area Network) frames via a serial port. The application allows connecting to a CAN bus, monitoring transmitted messages, recording data, and sending frames both individually and cyclically. The project is developed using Python and the Tkinter library for the graphical interface.
 
-The main execution unit of the system is the **ESP32** module connected to the **MCP2515** CAN controller, which communicates with the CAN bus and sends data to the computer via the serial port.
+The main execution unit of the system is the ESP32 module connected to the MCP2515 CAN controller, which communicates with the CAN bus and sends data to the computer via the serial port.
+
+This project offers a highly cost-effective alternative to professional CAN tools such as CanHacker, SavvyCAN, and PCAN-View. By leveraging affordable hardware like the ESP32 and MCP2515, this solution provides similar functionality at a fraction of the cost, making it accessible for hobbyists, developers, and small-scale automotive projects.
 
 ## Features
 
