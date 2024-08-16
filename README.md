@@ -14,39 +14,39 @@ The main execution unit of the system is the **ESP32** module connected to the *
    - Connecting to the CAN bus via the serial port.
    - The ESP32 module connected to the MCP2515 handles communication with the CAN bus and forwards data to the application.
 
-   ![Connection Diagram](./Connections.PNG)  <!-- Image placeholder -->
+![Connections](https://github.com/user-attachments/assets/77f69ed9-a83b-4fb3-8331-95b4874c83df)  <!-- Image placeholder -->
 
 2. **CAN Data Monitoring and Analysis**:
    - Receiving CAN frames, displaying their ID, DLC (Data Length Code), data, the number of received frames, and the period (in ms).
    - Ability to reset monitoring statistics.
 
-   ![CAN Bus Monitor](./CAN_monitor.PNG)  <!-- Image placeholder -->
+![CAN_monitor](https://github.com/user-attachments/assets/623f5616-f59b-41b5-94f1-5f9fb6c63d0d) <!-- Image placeholder -->
 
 3. **Recording and Saving Data**:
    - Recording received CAN frames.
    - Saving data to a JSON file.
    - Playing back saved data and displaying it in the graphical interface.
 
-   ![CAN Data Playback](./PlayRec_CAN.PNG)  <!-- Image placeholder -->
+   ![PlayRec_CAN](https://github.com/user-attachments/assets/2a86fcc4-89ae-435c-88f8-3b59e5afcb98)  <!-- Image placeholder -->
 
 4. **Sending CAN Frames**:
    - Sending individual CAN frames (CAN Single Shot).
    - Sending frames cyclically with a specified frequency.
    - Editing and filtering frames before sending them.
    
-   ![CAN Single Shot](./Can_SingleShoot.PNG)  <!-- Image placeholder -->
+  ![Can_SingleShoot](https://github.com/user-attachments/assets/422fa7f3-779c-4038-ba72-1b800b57b6cf)  <!-- Image placeholder -->
 
 5. **Reverse Engineering**:
    - A tool for analyzing data variability in CAN frames.
    - Highlighting data changes with colors to facilitate the identification of variable bits.
 
-   ![Reverse Engineering](./Reverse.PNG)  <!-- Image placeholder -->
+ ![Reverse](https://github.com/user-attachments/assets/1c03f8fc-6834-42fb-b572-1ce3f3bc329a) <!-- Image placeholder -->
 
 6. **COM Communication Logger**:
    - Recording and displaying raw data from the serial port.
    - Sending messages through the COM port directly from the application.
 
-   ![COM Logger](./ComLoger.PNG)  <!-- Image placeholder -->
+![ComLoger](https://github.com/user-attachments/assets/7f8b02a0-16bb-48de-87b3-6d5bfaefca3e)  <!-- Image placeholder -->
 
 ## ESP32 and MCP2515 Script
 
