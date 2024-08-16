@@ -1,0 +1,2 @@
+pyserial==3.4
+tkinter==0.1.0
