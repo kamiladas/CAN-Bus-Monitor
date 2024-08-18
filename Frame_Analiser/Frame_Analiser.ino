@@ -105,7 +105,7 @@ void printReceivedUARTMessage(const char* frame) {
   }
   Serial.println();
 
-  printCANMessage(can_id, dlc, data, "UART");
+///  printCANMessage(can_id, dlc, data, "UART");
 
   byte sndStat = CAN0.sendMsgBuf(can_id, 0, dlc, data);
   if (sndStat == CAN_OK) {
