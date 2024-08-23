@@ -163,19 +163,20 @@ def display_edit_window(data):
                 print(f"Sent frame: {frame_str.strip()}")
 
     def apply_filter():
-        filter_text = filter_entry.get().strip().upper()  # Convert filter to uppercase for consistent matching
+        filter_text = filter_entry.get().strip().upper()  # Pobierz tekst filtra i zamień na wielkie litery
+        filter_ids = [ft.strip() for ft in filter_text.split(',')]  # Podziel tekst na listę ID
 
-        # Clear the current displayed items
+        # Wyczyść bieżące wyświetlane elementy
         tree.delete(*tree.get_children())
 
-        # Apply the filter
+        # Filtrowanie ramek
         for frame in data:
-            frame_id_str = f"0x{frame['id']:03X}".upper()  # Ensure the ID is in uppercase to match the filter
-            if filter_text in frame_id_str:
-                # If the filter matches, insert the frame into the treeview
+            frame_id_str = f"0x{frame['id']:03X}".upper()  # Konwersja ID ramki na wielkie litery
+            if any(fid in frame_id_str for fid in filter_ids):
+                # Jeśli którykolwiek z filtrów pasuje, wstaw ramkę do treeview
                 tree.insert('', 'end', values=["", frame_id_str, len(frame['data'])] + [f"0x{byte:02X}" for byte in frame['data']])
 
-        # If no filter is applied (empty string), show all data
+        # Jeśli filtr jest pusty, wyświetl wszystkie dane
         if filter_text == "":
             update_frame_list()
 
